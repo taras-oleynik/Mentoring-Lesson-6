@@ -10,8 +10,9 @@ public class Calculator {
 
         Scanner sc = new Scanner(System.in);
 // declare the variables
-        Double number1, number2, result = null;
+        Double number1, number2;
         String operator;
+        char exit;
 
         boolean enter = true;
 
@@ -31,15 +32,15 @@ public class Calculator {
             switch (operator) {
 
                 case "+":
-                    result = number1 + number2;
+                    System.out.println(number1 + number2);
                     break;
 
                 case "-":
-                    result = number1 - number2;
+                    System.out.println(number1 - number2);
                     break;
 
                 case "*":
-                    result = number1 * number2;
+                    System.out.println(number1 * number2);
                     break;
 
                 case "/":
@@ -49,7 +50,7 @@ public class Calculator {
                         break;
                     }
 
-                    result = number1 / number2;
+                    System.out.println(number1 / number2);
 
                     break;
 
@@ -57,7 +58,11 @@ public class Calculator {
                     System.out.println("Please enter correct value");
             }
 
-            System.out.println(result);
+            System.out.println("If you want to continue - press any key, otherwise - press N");
+            exit = sc.next().toUpperCase().charAt(0);
+            if(exit == 'N'){
+                enter = false;
+            }
         }
     }
 }
