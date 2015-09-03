@@ -10,14 +10,14 @@ public class SortArrayByString {
     public void sortArrayByStringLength() {
 
         for (int i = arr.length-1; i > 0; i--) {
-            //создаем цикл для прохода по каждому элементу массива
+            //create a loop to iterate through each element of the array
             for (int k = 0; k < i; k++ ){
-// создаем внутренний цикл для смены местами ячеек массива в случае если длина последующей меньше предыдущей
+// create inner loop to change the place of the cells array's in the case where the length of follow-up less than the previous
                 if (arr[k].length() > arr[k+1].length() ) {
 
 
                     temp = arr[k];
-                    //создаем временную переменную для хронения элементов массива
+                    //Create a temporary variable to store the array elements
                     arr[k] = arr[k+1];
                     arr[k+1]=temp;
                 }
